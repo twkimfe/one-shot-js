@@ -45,11 +45,11 @@ let intro = `제 이름은 ${name} 입니다`;
 // 형 변환
 // 자바스크립트의 변수 선언
 // 동적 타입 언어
-let num = "100";
-console.log(typeof num);
+// let num = "100";
+// console.log(typeof num);
 // num 자료형이 알아서 string으로 변환
-num = 100;
-console.log(typeof num);
+// num = 100;
+// console.log(typeof num);
 // 자료형이 자동으로 number로 변환
 
 // 묵시적 형변환
@@ -147,3 +147,72 @@ console.log(typeof num);
 
 // 삼항 연산자
 // A ? B : C
+
+// 2.5 조건문
+// if문
+// let num = 50;
+
+// if (num < 10) {
+//   console.log("num은 10보다 작습니다.");
+// } else if (num > 10) {
+//   console.log("num은 10보다 큽니다.");
+// } else {
+//   console.log("num은 10입니다.");
+// }
+
+// switch case문
+// let fruit = "apple";
+
+// switch (fruit) {
+//   case "banana":
+//     console.log("바나나");
+//     break;
+//   case "apple":
+//     console.log("사과");
+//     break;
+//   case "orange":
+//     console.log("오렌지");
+//     break;
+//   case "grape":
+//     console.log("포도");
+//     break;
+//   default:
+//     console.log("다른 과일");
+// }
+
+// 2.6 함수
+// Early return pattern
+// function compare(num) {
+//   if (num === 0) {
+//     return "num의 값이 0입니다.";
+//   }
+//   if (num < 0) {
+//     return "num의 값이 0보다 작습니다.";
+//   }
+//   if (num >= 10) {
+//     return "num의 값이 10보다 크거나 같습니다.";
+//   }
+//   return "num의 값이 0보다 크고 10보다 작습니다.";
+// }
+
+// console.log(compare(15));
+
+// 2.7 스코프 Scope
+// 변수와 함수가 영향을 미치는 범위
+// 전역, 지역
+// let globalNum = 100;
+// 전역 변수
+
+// function testFunc() {
+//   let innerNum = 50;
+//   지역 변수
+//   console.log(globalNum);
+//   console.log(innerNum);
+// }
+// testFunc();
+// console.log(globalNum);
+// console.log(innerNum);
+
+// 함수 스코프, 블록 스코프
+// let선언: 블록 스코프
+// var선언: 함수 스코프
