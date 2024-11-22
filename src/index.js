@@ -443,3 +443,68 @@
 // for (let key in person) {
 //   console.log(`key ${key}, value ${person[key]}`);
 // }
+
+// 2.14 배열 메서드 - 1
+// let arr = [1, 2, 3, 4, 5];
+
+// arr.forEach 메서드
+// 메개변수로 배열의 각 요소를 함수로 전달하는 함수
+// arr.forEach((elm) => {
+//   console.log(elm);
+// });
+
+// 메개변수로 배열의 각 요소 순서를 함수로 전달하는 법
+// arr.forEach((elm, idx) => {
+//   console.log(`${idx}번째 요소는 ${elm}입니다.`);
+// });
+
+// 메개변수로 배열 자체를 함수로 전달하는 법
+// arr.forEach((elm, idx, array) => {
+//   console.log(`${idx}번째 요소는 ${elm}입니다.`);
+//   console.log(array);
+// });
+// forEach는 for문을 대신하여 여러 배열 기능을 수행
+
+// arr.map 메서드
+// 배열 안의 모든 요소를 변환하는 메서드
+// 전달한 콜백함수의 호출한 결과를 모아서 새로운 배열로 반환해주는 메서드, elm, idx, arr 모드 사용 가능
+// let newArray = arr.map((elm) => {
+//   return elm * 10;
+// });
+// console.log(newArray);
+
+// arr.at 메서드
+// 배열의 위치한 몇 번째 요소를 값으로 반환
+// let colors = ["green", "red", "blue"];
+// console.log(colors.at(1));
+
+// arr.includes("elm", n) 메서드
+// 배열 요소가 배열에 존재하는지, 배열 순서가 n번째 맞는 지 판단하고, true / false로 반환하는 메서드
+// console.log(colors.includes("red", 3));
+// console.log(colors.includes("red", 1));
+
+// arr.indexOf("elm", n) 메서드
+// 특정 값을 지닌 요소가 배열 몇 번째에 있는지 확인하는 메서드
+// console.log(colors.indexOf("red"));
+// console.log(colors.indexOf("grey"));
+// 없는 값을 입력 시, "-1" 반환
+
+let colors = [
+  { id: 0, color: "red" },
+  { id: 1, color: "white" },
+  { id: 2, color: "blue" },
+];
+
+// 배열 모든 요소가 객체일 때, 해당 객체를 찾고, idx 값을 반환하는 메서드, 없을 시 -1 반환
+// let idx = colors.findIndex((elm) => elm.color === "red");
+// 요소, idx, 배열도 반환 가능
+// colors.findIndex((elm, idx, array) =>
+//   console.log(`${idx} 번째 값은 id: ${elm.id}, color: ${elm.color} `)
+// );
+// colors.findIndex((elm, idx, array) => console.log(array));
+
+// arr.find 메서드
+// 배열에서 해당 객체 자체를 배열로 반환하는 메서드, 배열에 없다면 undefined 반환
+let idx = colors.find((elm) => elm.color === "blue");
+
+console.log(idx);
