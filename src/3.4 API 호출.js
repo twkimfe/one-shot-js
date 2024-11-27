@@ -1,4 +1,6 @@
 // 3.4 API 호출
+// API (Application Programming Interface)
+// 서로 다른 소프트웨어나 서비스들이 서로 통신하고 데이터를 주고받을 수 있게 해주는 규칙과 도구들의 집합
 // JSON (Javascript Object Notation, 자바스크립트 객체 표기법)
 // let response = fetch("https://jsonplaceholder.typicode.com/users")
 //   .then((res) => console.log(res))
