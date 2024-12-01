@@ -111,9 +111,9 @@ let $animalInfo = document.querySelector("div.animal-info");
 console.log($animalInfo.innerHTML);
 
 // innerHTML 문자 설정, 수정
-$animalInfo.innerHTML = '<div id="name">고양이</div>';
+// $animalInfo.innerHTML = '<div id="name">고양이</div>';
 
-console.log($animalInfo);
+// console.log($animalInfo);
 
 // innerHTML는 성능, 보안 이슈가 있어서 가능하면,
 // createElement, textcontent 같은 DOM API를 사용해야 좋음
