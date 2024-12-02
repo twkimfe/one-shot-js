@@ -8,35 +8,37 @@ export default function RegionList({ $app, initialState, handleRegion }) {
 
   this.template = () => {
     const regionList = [
-      "All",
-      "Asia",
-      "Middle-East",
-      "Europe",
-      "Latin-America",
-      "Africa",
-      "North-America",
-      "Oceania",
+      "🚀 All",
+      "🌏 Asia",
+      "🕌 Middle-East",
+      "🇪🇺 Europe",
+      "💃 Latin-America",
+      "🐘 Africa",
+      "🏈 North-America",
+      "🏄 Oceania",
     ];
     let temp = ``;
     regionList.forEach((elm) => {
-      const regionId = elm === "All" ? "All" : elm;
+      let regionId = elm.split(" ")[1];
       temp += `<div id=${regionId}>${elm}</div>`;
     });
-
     return temp;
   };
 
   this.render = () => {
     this.$target.innerHTML = this.template();
+    if (this.state) {
+      let $currentRegion = document.getElementById(this.state);
+      $currentRegion && ($currentRegion.className = "clicked");
+    } else {
+      document.getElementById("All").className = "clicked";
+    }
 
-    const regions = this.$target.querySelectorAll("div");
-    regions.forEach(($region) => {
-      if (
-        (this.state && $region.id === this.state) ||
-        (!this.state && $region.id === "All")
-      ) {
-        $region.className = "clicked";
-      }
+    const $regionList = this.$target.querySelectorAll("div");
+    $regionList.forEach((elm) => {
+      elm.addEventListener("click", () => {
+        this.handleRegion(elm.id);
+      });
     });
   };
 
